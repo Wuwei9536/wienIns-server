@@ -1,0 +1,54 @@
+type Query {
+  """
+  拉取所有的猫
+  """
+  getCats: [Cat]
+  """
+  拉取对应id的猫
+  """
+  cat(id: ID!): Cat
+}
+
+type Mutation {
+  
+  createCat(createCatInput: CreateCatInput): Cat
+  deleteCat(deleteCatInput: DeleteCatInput): Cat
+  updateCat(updateCatInput: UpdateCatInput): Cat
+}
+
+type Subscription {
+  catCreated: [Cat]
+}
+
+"""
+猫的实体
+"""
+type Cat {
+  """
+  主键
+  """
+  id: Int
+  """
+  姓名
+  """
+  name: String
+  """
+  年龄 长度2
+  """
+  age: Int
+}
+
+input CreateCatInput {
+  
+  name: String
+  age: Int
+}
+input DeleteCatInput {
+  id:Int!
+}
+input UpdateCatInput {
+  
+  id: Int!
+  name: String
+  age: Int
+}
