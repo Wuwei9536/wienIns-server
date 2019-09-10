@@ -12,7 +12,7 @@ import { CatEntity } from './cats.entity';
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'weekly',
+      database: 'default',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
