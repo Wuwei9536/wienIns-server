@@ -7,12 +7,12 @@ import {
   Subscription,
   Context,
 } from '@nestjs/graphql';
-import { Timeout } from '../../common/interceptor';
+// import { Timeout } from '../../common/interceptor';
 
 import { Cat } from '../../schema';
 import { CatsService } from './cats.service';
 
-@UseInterceptors(Timeout)
+// @UseInterceptors(Timeout)
 @Resolver('Cat')
 export class CatsResolvers {
   constructor(private readonly catsService: CatsService) {}

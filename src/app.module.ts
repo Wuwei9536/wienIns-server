@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
-import { Graphql } from './graphql/index';
+import { Graphql } from './graphql';
+import { DatabaseModule } from './model';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { Graphql } from './graphql/index';
     }),
     /* Graphql 默认全局范围内搜索解析器 */
     Graphql,
+    DatabaseModule,
   ],
 })
 export class AppModule {}
