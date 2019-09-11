@@ -1,8 +1,8 @@
 {
-  "name": "nest-gql",
-  "version": "0.0.1",
+  "name": "nest-gql-typeorm",
+  "version": "0.9.0",
   "description": "",
-  "author": "",
+  "author": "wien wu",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
